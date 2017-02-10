@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>QR CODE GEN</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <style>
+
+         .card .card-image img.qr-logo{
+             position: absolute;
+             top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width:40px;
+            height: 40px;
+         }
+        </style>
+
+        <div class="row">
+            <div class="col s12 m3">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="qr-code" src="/qr-image" alt="SVG">
+                        <img class="qr-logo" src="/images/sn-logo.png" alt="SN Logo">
+                    </div>
+                    <div class="card-content teal">
+                        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure debitis, sequi culpa rem recusandae unde distinctio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    </body>
+</html>
