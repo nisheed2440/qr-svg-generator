@@ -2,10 +2,10 @@ var QrSvg = require('./qr-svg');
 var express = require('express');
 
 var userData = {
-  name: 'Nisheed Jagadish',
-  email: 'njagadish3@sapient.com',
-  id: 'njaga2',
-  designation: 'Manager Interactive Development'
+  name: 'John Doe',
+  email: 'john_doe@xyz.com',
+  id: 'jdoe2',
+  designation: 'Fancy Title Here'
 };
 
 var app = express();
