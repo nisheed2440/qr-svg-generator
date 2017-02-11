@@ -6,7 +6,7 @@ var qr = require('qr-image');
 //Ideal QR width, but can be higher
 var BASELINE_WIDTH_QR = 240;
 //Ideal size width within the QR
-var BASELINE_WIDTH_LOGO = 40;
+var BASELINE_WIDTH_LOGO = 50;
 
 var customLogoSvg = function (stream, fillColor) {
     var rWidth = (BASELINE_WIDTH_LOGO / BASELINE_WIDTH_QR) * 100;
@@ -29,6 +29,9 @@ module.exports = function qrSvg(dataText, qrColor) {
     var stream = new Readable();
     //Encrypt the `dataText` using AES encryption and `cypher`;
     var encryptedText = CryptoJS.AES.encrypt(dataText, cypher);
+    
+    //To log the encryptedText to the console to verify, uncomment the line below
+    //console.log(encryptedText.toString());
 
     //To Decrypt the encrypted text use the following snippet
     //console.log(CryptoJS.AES.decrypt(encryptedText.toString(), cypher).toString(CryptoJS.enc.Utf8));
