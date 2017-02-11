@@ -3,14 +3,18 @@ var Readable = require('stream').Readable;
 // Add your secret passphrase to `cypher` key in package.json
 var cypher = require('./package.json').cypher;
 var qr = require('qr-image');
+//Ideal QR width, but can be higher
 var BASELINE_WIDTH_QR = 240;
+//Ideal size width within the QR
 var BASELINE_WIDTH_LOGO = 40;
 
 var customLogoSvg = function (stream, fillColor) {
     var rWidth = (BASELINE_WIDTH_LOGO / BASELINE_WIDTH_QR) * 100;
     var rWidthHalf = rWidth / 2;
     stream.push('<svg xmlns="http://www.w3.org/2000/svg" ')
+    //Add width and height as percentages of the qr dimensions
     stream.push('width="' + rWidth + '%" height="' + rWidth + '%" ');
+    //Position the login in the center of the QR
     stream.push('x="' + (50 - rWidthHalf) + '%" y="' + (50 - rWidthHalf) + '%" ');
     stream.push('viewBox="0 0 40 40" ');
     stream.push('>');
