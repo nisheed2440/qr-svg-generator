@@ -1,6 +1,8 @@
-# qr-svg-generator
+# QR SVG Generator
 
 Sample application created to implement QR code generation from the server with encrypted data.
+
+Thanks to [@alexeyten](https://github.com/alexeyten) for creating the [qr-image](https://www.npmjs.com/package/qr-image "qr-image") npm module. This application builds on top of the [qr-image](https://www.npmjs.com/package/qr-image "qr-image") library with added functionality for `color` and `logo`.
 
 ![alt text][logo]
 
