@@ -13,7 +13,8 @@ var app = express();
 app.use(express.static('public'))
 
 app.get('/qr-image', function (req, res) {
-  var code = QrSvg(JSON.stringify(userData));
+  var color = '#' + (req.query.color || '1D1D1D');
+  var code = QrSvg(JSON.stringify(userData), color);
   res.type('svg');
   code.pipe(res);
 });
