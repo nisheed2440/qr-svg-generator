@@ -14,7 +14,7 @@ var customLogoSvg = function (stream, fillColor) {
     stream.push('<svg xmlns="http://www.w3.org/2000/svg" ')
     //Add width and height as percentages of the qr dimensions
     stream.push('width="' + rWidth + '%" height="' + rWidth + '%" ');
-    //Position the login in the center of the QR
+    //Position the logo in the center of the QR
     stream.push('x="' + (50 - rWidthHalf) + '%" y="' + (50 - rWidthHalf) + '%" ');
     stream.push('viewBox="0 0 40 40" ');
     stream.push('>');
